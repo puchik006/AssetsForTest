@@ -10,7 +10,7 @@ public class scr_Enemy_Movement : MonoBehaviour
     private scr_Enemy_Animator enemyAnimator;
     private bool isTouchingPlayer = false;
 
-    private void Start()
+    private void OnEnable()
     {
         enemyAnimator = GetComponent<scr_Enemy_Animator>();
     }
@@ -62,8 +62,6 @@ public class scr_Enemy_Movement : MonoBehaviour
     {
         if (other.transform == player)
         {
-            Debug.Log("asdasd" + other.name);
-
             isTouchingPlayer = true;
         }
     }
@@ -73,7 +71,7 @@ public class scr_Enemy_Movement : MonoBehaviour
         if (other.transform == player)
         {
             isTouchingPlayer = false;
-            enemyAnimator.SetPunch(false); // Stop punching when the player moves away
+            enemyAnimator.SetPunch(false);
         }
     }
 }
