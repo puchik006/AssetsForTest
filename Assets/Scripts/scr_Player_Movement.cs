@@ -35,3 +35,4 @@ public class scr_Player_Movement : MonoBehaviour
         playerAnimator.SetIsBackward(isMovingBackward);
     }
 }
+

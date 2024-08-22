@@ -6,13 +6,16 @@ public class scr_Player_Animator : MonoBehaviour
 
     public void SetIsForward(bool isMovingForward)
     {
-        // Set the "IsForward" parameter in the animator
         _animator.SetBool("IsForward", isMovingForward);
     }
 
     public void SetIsBackward(bool isMovingBackward)
     {
-        // Set the "IsBackward" parameter in the animator
         _animator.SetBool("IsBackward", isMovingBackward);
+    }
+
+    public void SetPunch(bool isPunch)
+    {
+        _animator.SetBool("IsPunch", isPunch);
     }
 }
